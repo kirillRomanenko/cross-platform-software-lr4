@@ -1,0 +1,23 @@
+{
+    "name": "cross-platform-software-lr4",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "electron ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kirillRomanenko/cross-platform-software-lr4.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kirillRomanenko/cross-platform-software-lr4/issues"
+    },
+    "homepage": "https://github.com/kirillRomanenko/cross-platform-software-lr4#readme",
+    "devDependencies": {
+        "electron": "^8.2.3"
+    }
+}
