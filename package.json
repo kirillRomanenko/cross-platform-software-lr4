@@ -19,5 +19,8 @@
     "homepage": "https://github.com/kirillRomanenko/cross-platform-software-lr4#readme",
     "devDependencies": {
         "electron": "^8.2.3"
+    },
+    "dependencies": {
+        "ioredis": "^4.16.3"
     }
 }
