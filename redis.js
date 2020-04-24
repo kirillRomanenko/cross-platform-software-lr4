@@ -43,7 +43,7 @@ function getCountWords() {
     redis.get("countWords").then(function (result) {
         if (result != null) {
             console.log('Количество слов: ', result);
-            fs.writeFileSync("countWords.txt", result);
+            fs.writeFileSync("countWords.txt", 'Количество слов: ' + result);
         } else {
             console.log('слова отсутствуют!');
         }
@@ -72,7 +72,7 @@ function getPolindrom() {
         let polindromText = [];
         polindromText = JSON.parse(result);
         console.log('слова палиндромы: ', polindromText);
-        fs.writeFileSync("polindrom.txt", polindromText);
+        fs.writeFileSync("polindrom.txt", 'слова палиндромы: ' + polindromText);
 
         redis.quit();
     });
