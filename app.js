@@ -26,7 +26,7 @@ function createGeneralWindow() {
                     nodeIntegration: true
                 }
             })
-            sizeWordWin.webContents.openDevTools()
+            // sizeWordWin.webContents.openDevTools()
             sizeWordWin.loadFile('./renderer/addSizeWord.html');
             // cleanup
             sizeWordWin.on('closed', () => {
@@ -35,9 +35,8 @@ function createGeneralWindow() {
         }
     });
     ipcMain.on('add-sizeWord-form', (event, data) => {
-        // console.log('form', data);
         let size = Number(data['inputSize']);
-        let countStrings = functions.getRandom(100, 500);
+        let countStrings = functions.getRandom(100, 1000);
         let text = [];
         text = functions.generateText(text, countStrings, size);
         let polindromArray = [];
@@ -47,6 +46,14 @@ function createGeneralWindow() {
         request.setCountWords(countStrings);
         request.setSourceText(textRedis);
         request.setPolindrom(polindromRedis);
+    });
+
+    ipcMain.on('add-sourceData-report', () => {
+        request.getCountWords();
+        request.getSourceText();
+    });
+    ipcMain.on('add-polindrom-report', () => {
+        request.getPolindrom();
     });
 }
 

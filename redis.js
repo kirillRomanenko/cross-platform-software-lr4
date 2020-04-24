@@ -1,4 +1,5 @@
 const Redis = require("ioredis");
+const fs = require("fs");
 // const redis = new Redis(); // uses defaults unless given configuration object
 function setCountWords(count) {
     const redis = new Redis(); // uses defaults unless given configuration object
@@ -42,6 +43,7 @@ function getCountWords() {
     redis.get("countWords").then(function (result) {
         if (result != null) {
             console.log('Количество слов: ', result);
+            fs.writeFileSync("countWords.txt", result);
         } else {
             console.log('слова отсутствуют!');
         }
@@ -56,6 +58,7 @@ function getSourceText() {
         sourceText = JSON.parse(result);
         if (sourceText != null) {
             console.log(sourceText);
+            fs.writeFileSync("sourceText.txt", sourceText);
         } else {
             console.log('исходный текст отсутствует!');
         }
@@ -69,6 +72,7 @@ function getPolindrom() {
         let polindromText = [];
         polindromText = JSON.parse(result);
         console.log('слова палиндромы: ', polindromText);
+        fs.writeFileSync("polindrom.txt", polindromText);
 
         redis.quit();
     });
