@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Поиск палиндромов</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row inputSizeWord">
+            <div class="col">
+                <button type="button" class="btn btn-primary" id="buttonSizeWord">Ввод размера слова</button>
+            </div>
+        </div>
+        <div class="row showSourceData">
+            <div class="col">
+                <button type="button" class="btn btn-primary" id="buttonSourceData">Просмотр исходных данных</button>
+            </div>
+        </div>
+        <div class="row showResult">
+            <div class="col">
+                <button type="button" class="btn btn-primary" id="buttonResult">Результат</button>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Insert this line above script imports  -->
+<script>
+    if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+    }
+</script>
+
+<!-- normal script imports etc  -->
+<script src="./lib/jquery-3.4.1.min.js"></script>
+<script src="./lib/bootstrap/bootstrap.min.js"></script>
+
+
+
+<!-- Insert this line after script imports -->
+<script>
+    if (window.module) module = window.module;
+</script>
+<script src="./index.js"></script>
+
+</html>

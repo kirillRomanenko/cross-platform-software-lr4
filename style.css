@@ -1,0 +1,14 @@
+.inputSizeWord {
+    margin-top: 30%;
+}
+
+.showSourceData,
+.showResult {
+    margin-top: 5%;
+}
+
+#buttonSizeWord,
+#buttonSourceData,
+#buttonResult {
+    width: 100%;
+}
